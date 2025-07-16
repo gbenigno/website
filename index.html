@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name</title>
+  <title>Gabriel Bruno Benigno</title>
   <style>
     body {
       font-family: sans-serif;
@@ -58,12 +58,21 @@
 
     <h2>Contact</h2>
     <p>
-      Email me at <a href="mailto:your.email@example.com">your.email@example.com</a>
+      Email me at <a href="mailto:gabriel.b.benigno@gmail.com">gabriel.b.benigno@gmail.com</a>
     </p>
   </main>
 
   <footer>
-    &copy; 2025 Your Name
+    <span id="last-updated"></span>
+    <script>
+      const date = new Date();
+      const formatted = date.toLocaleDateString(undefined, {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+      document.getElementById('last-updated').textContent = `Last updated ${formatted}`;
+    </script>
   </footer>
 </body>
 </html>
