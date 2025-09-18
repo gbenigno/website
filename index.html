@@ -13,32 +13,30 @@
   <meta name="theme-color" content="#000000" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50%25' x='50%25' dominant-baseline='middle' text-anchor='middle' font-size='48'%3Eɢ%3C/text%3E%3C/svg%3E" />
   <style>
-    /* Hardcore monospace, minimal, print-clean */
     :root{
       --bg: #ffffff;
       --fg: #111111;
-      --muted: #6b7280; /* slate-500 */
+      --muted: #6b7280;
       --hair: color-mix(in oklab, var(--fg) 12%, transparent);
       --link: #0a0a0a;
       --maxw: 70ch;
     }
     @media (prefers-color-scheme: dark){
       :root{
-        /* Low-glare dark mode to reduce halation for astigmatism */
-        --bg: #0d0d0f;      /* near-black, not pure black */
-        --fg: #d8d5cf;      /* warm light gray instead of pure white */
-        --muted: #a8b0bb;   /* softened slate */
-        --hair: color-mix(in oklab, var(--fg) 12%, transparent);
-        --link: #d8d5cf;    /* same tone as text; underline carries affordance */
+        --bg: #141416;      /* softer near-black */
+        --fg: #e4e0d9;      /* warm off-white */
+        --muted: #b1aaa0;   /* muted warm gray */
+        --hair: color-mix(in oklab, var(--fg) 10%, transparent);
+        --link: #e4e0d9;
       }
-    }
     }
 
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0;
-      font: 16px/1.6 "Courier New", Courier, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font: 17px/1.7 "Courier New", Courier, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      letter-spacing: 0.02em;
       background: var(--bg);
       color: var(--fg);
       -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
@@ -61,7 +59,7 @@
 
     main{border-top: 1px solid var(--hair)}
     section{padding: .9rem 0; border-bottom: 1px solid var(--hair)}
-    h2{margin:.2rem 0 .4rem 0; font-size: .95rem; letter-spacing:.12em; text-transform: uppercase}
+    h2{margin:.2rem 0 .4rem 0; font-size: .95rem; letter-spacing:.12em; text-transform: uppercase; color:var(--muted)}
     p{margin:.5rem 0}
 
     .inline{display:flex; gap:1rem; flex-wrap:wrap}
@@ -113,10 +111,6 @@
       <section>
         <h2>Contact</h2>
         <p>gabriel.b.benigno [at] gmail [dot] com</p>
-        <div class="inline">
-          <a href="mailto:gabriel.b.benigno@gmail.com">email</a>
-          <a href="https://scholar.google.ca/citations?user=BsNdLCkAAAAJ" target="_blank" rel="noopener">scholar</a>
-        </div>
       </section>
     </main>
 
