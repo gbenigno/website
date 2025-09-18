@@ -24,12 +24,14 @@
     }
     @media (prefers-color-scheme: dark){
       :root{
-        --bg: #000000;
-        --fg: #e6e6e6;
-        --muted: #9aa3b2;
-        --hair: color-mix(in oklab, var(--fg) 14%, transparent);
-        --link: #e6e6e6;
+        /* Low-glare dark mode to reduce halation for astigmatism */
+        --bg: #0d0d0f;      /* near-black, not pure black */
+        --fg: #d8d5cf;      /* warm light gray instead of pure white */
+        --muted: #a8b0bb;   /* softened slate */
+        --hair: color-mix(in oklab, var(--fg) 12%, transparent);
+        --link: #d8d5cf;    /* same tone as text; underline carries affordance */
       }
+    }
     }
 
     *{box-sizing:border-box}
@@ -111,6 +113,10 @@
       <section>
         <h2>Contact</h2>
         <p>gabriel.b.benigno [at] gmail [dot] com</p>
+        <div class="inline">
+          <a href="mailto:gabriel.b.benigno@gmail.com">email</a>
+          <a href="https://scholar.google.ca/citations?user=BsNdLCkAAAAJ" target="_blank" rel="noopener">scholar</a>
+        </div>
       </section>
     </main>
 
