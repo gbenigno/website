@@ -19,6 +19,7 @@
       --muted: #6b7280;
       --hair: color-mix(in oklab, var(--fg) 12%, transparent);
       --link: #0a0a0a;
+      --link-border: color-mix(in oklab, var(--fg) 35%, transparent);
       --maxw: 70ch;
     }
     @media (prefers-color-scheme: dark){
@@ -28,6 +29,7 @@
         --muted: #b1aaa0;   /* muted warm gray */
         --hair: color-mix(in oklab, var(--fg) 10%, transparent);
         --link: #e4e0d9;
+        --link-border: color-mix(in oklab, var(--fg) 35%, transparent);
       }
     }
 
@@ -42,9 +44,24 @@
       -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
     }
 
-    a{color:var(--link); text-decoration: underline; text-underline-offset: 2px}
-    a:hover{text-decoration-thickness: 2px}
-    a:focus{outline: 2px dashed var(--fg); outline-offset: 3px}
+    /* Subtle link style (#3): dotted baseline, solid on hover/focus */
+    a{
+      color: var(--link);
+      text-decoration: none;
+      border-bottom: 1px dotted var(--link-border);
+      padding-bottom: 1px;
+      transition: border-bottom-width .15s ease, border-bottom-color .15s ease, border-bottom-style .15s ease;
+    }
+    a:hover{
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+    }
+    a:focus-visible{
+      outline: 2px dashed var(--fg);
+      outline-offset: 3px;
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
+    }
 
     .wrap{max-width: var(--maxw); margin: 0 auto; padding: 2.25rem 1rem 3rem}
 
@@ -68,7 +85,7 @@
     footer{padding-top: .9rem; color:var(--muted); font-size:.95rem; text-align:center}
 
     @media print{
-      a{text-decoration: underline}
+      a{ text-decoration: underline; border-bottom: none }
       header, footer{page-break-inside: avoid}
     }
   </style>
