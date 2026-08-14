@@ -105,52 +105,39 @@
 <body>
   <div class="wrap">
     <header>
-      <h1>GABRIEL BRUNO BENIGNO, PhD</h1>
+      <h1>GABRIEL B. BENIGNO, PhD</h1>
       <p class="sub">computational & theoretical neuroscientist</p>
     </header>
 
     <main>
-      <section>
-        <h2>About</h2>
+      <section aria-label="About">
         <p>
-          I study how the brain works through the lens of its physical substrate. Working with 
-          <a href="https://scholar.google.ca/citations?user=9vumoioAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Nicolas Brunel</a> 
-          (Bocconi University, Milan) and 
-          <a href="https://scholar.google.ca/citations?user=6Lm9z-sAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Nicho Hatsopoulos</a>
-          (University of Chicago), I use neurobiological insight, machine learning frameworks, and physics methods to understand operating modes of complex neural systems as they carry out their functions—under the constraints of finite space and time. Currently I focus on the motor system.
+          Population recordings reveal rich neural codes, but many analyses treat neurons as an arbitrarily ordered list of units, modelling their relationships without reference to their physical arrangement. What if that arrangement is part of the computation? Inspired by field theory in physics, I study neural populations as spatially extended systems, asking how tissue geometry and finite signal propagation constrain the neural interactions that give rise to collective dynamics during behaviour.
         </p>
         <p>
-          I also collaborate with <a href="https://scholar.google.ca/citations?user=cv-YgL0AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Xiao-Jing Wang</a> (NYU) on questions of working memory.
+          Working with <a href="https://scholar.google.ca/citations?user=9vumoioAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Nicolas Brunel</a> (Bocconi, Milan) and <a href="https://scholar.google.ca/citations?user=6Lm9z-sAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Nicho Hatsopoulos</a> (UChicago), I currently focus on the motor system. I also collaborate with <a href="https://scholar.google.ca/citations?user=cv-YgL0AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Xiao-Jing Wang</a> (NYU) on working memory.
         </p>
         <p>
-          Previously: vision with 
-          <a href="https://scholar.google.ca/citations?user=8BhNuOEAAAAJ&hl=en" target="_blank" rel="noopener">Lyle Muller</a> 
-          (Western University) in collaboration with 
-          <a href="https://scholar.google.ca/citations?user=-5-x2ikAAAAJ&hl=en" target="_blank" rel="noopener">John Reynolds</a> 
-          (Salk Institute); neuroimaging with
-          <a href="https://scholar.google.com/citations?user=1JrrurIAAAAJ&hl=en" target="_blank" rel="noopener">Ravi Menon</a> 
-          (Western University).
+          Previously: vision with <a href="https://scholar.google.ca/citations?user=8BhNuOEAAAAJ&hl=en" target="_blank" rel="noopener">Lyle Muller</a> (Western) and <a href="https://scholar.google.ca/citations?user=-5-x2ikAAAAJ&hl=en" target="_blank" rel="noopener">John Reynolds</a> (Salk Institute); neuroimaging with <a href="https://scholar.google.com/citations?user=1JrrurIAAAAJ&hl=en" target="_blank" rel="noopener">Ravi Menon</a> (Western).
         </p>
       </section>
 
-      <section>
-        <h2>Publications</h2>
-        <p><a href="https://scholar.google.ca/citations?user=BsNdLCkAAAAJ" rel="me noopener" target="_blank">Google Scholar</a></p>
-      </section>
-
-      <section>
-        <h2>Contact</h2>
-        <p>
+      <section aria-label="Publications and contact">
+        <p class="inline">
+          <a href="https://scholar.google.ca/citations?user=BsNdLCkAAAAJ" rel="me noopener" target="_blank">Google Scholar</a>
           <a href="mailto:gb@uchicago.edu">gb@uchicago.edu</a>
         </p>
       </section>
     </main>
 
+    <!--
     <footer>
       <time id="updated" datetime=""></time>
     </footer>
+    -->
   </div>
 
+  <!--
   <script>
     const d = new Date(document.lastModified || Date.now());
     const fmt = new Intl.DateTimeFormat(undefined,{year:'numeric',month:'short',day:'2-digit'}).format(d);
@@ -158,5 +145,6 @@
     t.textContent = `last updated ${fmt}`;
     t.dateTime = d.toISOString().slice(0,10);
   </script>
+  -->
 </body>
 </html>
